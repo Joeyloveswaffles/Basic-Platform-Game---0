@@ -1,2 +1,2 @@
-# Basic-Platform-Game---0
+# Basic-Platform-Game-0
 Project in C# using unity to make a platformer.
