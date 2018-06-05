@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MonoDevelop.VersionControl.Git</name>
+    </assembly>
+    <members>
+        <member name="P:MonoDevelop.VersionControl.Git.Stash.Author">
+            <summary>
+            Who created the stash
+            </summary>
+        </member>
+        <member name="P:MonoDevelop.VersionControl.Git.Stash.DateTime">
+            <summary>
+            Timestamp of the stash creation
+            </summary>
+        </member>
+        <member name="P:MonoDevelop.VersionControl.Git.Stash.Comment">
+            <summary>
+            Stash comment
+            </summary>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.GitUtil.CompareCommits(NGit.Repository,NGit.Revwalk.RevCommit,NGit.Revwalk.RevCommit)">
+            <summary>
+            Compares two commits and returns a list of files that have changed
+            </summary>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.GitUtil.GetCommitChanges(NGit.Repository,NGit.Revwalk.RevCommit)">
+            <summary>
+            Returns a list of files that have changed in a commit
+            </summary>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.Call">
+            <summary>
+            Executes the
+            <code>Diff</code>
+            command with all the options and parameters
+            collected by the setter methods (e.g.
+            <see cref="M:MonoDevelop.VersionControl.Git.MyersDiff.SetCached(System.Boolean)">SetCached(bool)</see>
+            of this
+            class. Each instance of this class should only be used for one invocation
+            of the command. Don't call this method twice on an instance.
+            </summary>
+            <returns>a DiffEntry for each path which is different</returns>
+            <exception cref="T:NGit.Api.Errors.GitAPIException"></exception>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.SetCached(System.Boolean)">
+            <param name="cached">whether to view the changes you staged for the next commit</param>
+            <returns>this instance</returns>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.SetPathFilter(NGit.Treewalk.Filter.TreeFilter)">
+            <param name="pathFilter">parameter, used to limit the diff to the named path</param>
+            <returns>this instance</returns>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.SetOldTree(NGit.Treewalk.AbstractTreeIterator)">
+            <param name="oldTree">the previous state</param>
+            <returns>this instance</returns>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.SetNewTree(NGit.Treewalk.AbstractTreeIterator)">
+            <param name="newTree">the updated state</param>
+            <returns>this instance</returns>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.SetShowNameAndStatusOnly(System.Boolean)">
+            <param name="showNameAndStatusOnly">whether to return only names and status of changed files
+            	</param>
+            <returns>this instance</returns>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.SetOutputStream(Sharpen.OutputStream)">
+            <param name="out">the stream to write line data</param>
+            <returns>this instance</returns>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.SetContextLines(System.Int32)">
+            <summary>Set number of context lines instead of the usual three.</summary>
+            <remarks>Set number of context lines instead of the usual three.</remarks>
+            <param name="contextLines">the number of context lines</param>
+            <returns>this instance</returns>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.SetSourcePrefix(System.String)">
+            <summary>Set the given source prefix instead of "a/".</summary>
+            <remarks>Set the given source prefix instead of "a/".</remarks>
+            <param name="sourcePrefix">the prefix</param>
+            <returns>this instance</returns>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.SetDestinationPrefix(System.String)">
+            <summary>Set the given destination prefix instead of "b/".</summary>
+            <remarks>Set the given destination prefix instead of "b/".</remarks>
+            <param name="destinationPrefix">the prefix</param>
+            <returns>this instance</returns>
+        </member>
+        <member name="M:MonoDevelop.VersionControl.Git.MyersDiff.SetProgressMonitor(NGit.ProgressMonitor)">
+            <summary>The progress monitor associated with the diff operation.</summary>
+            <remarks>
+            The progress monitor associated with the diff operation. By default, this
+            is set to <code>NullProgressMonitor</code>
+            </remarks>
+            <seealso cref="T:NGit.NullProgressMonitor">NGit.NullProgressMonitor</seealso>
+            <param name="monitor">a progress monitor</param>
+            <returns>this instance</returns>
+        </member>
+    </members>
+</doc>
